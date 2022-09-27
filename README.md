@@ -1,7 +1,7 @@
 ### REcipes app
-an app that shows a list of imaginary recipes and their ingredient 
+A flutter app that shows a list of imaginary recipes and their ingredient 
 make by inspiration from flutter Apprentice chapter 2
-for andriod 
+for andriod and ios 
 
 ![Screenshot_1664243868](https://user-images.githubusercontent.com/84554840/192415628-9fb7af4f-d1b1-40c2-a1b8-28aba7a4a7da.png)
 ![Screenshot_1664243879](https://user-images.githubusercontent.com/84554840/192415631-e41cd1ad-6c86-4af9-999d-91d20742e6c9.png)
