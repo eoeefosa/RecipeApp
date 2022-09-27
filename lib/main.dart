@@ -6,6 +6,7 @@ void main() {
   runApp(const RecipeApp());
 }
 
+// TODO: Add dark and light theme
 class RecipeApp extends StatelessWidget {
   const RecipeApp({super.key});
 
@@ -19,16 +20,16 @@ class RecipeApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Recipe Calculator'),
+      home: const MyHomePage(title: 'Recipe Calculator'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title});
 
   final String title;
-  Color _currentColor = Colors.white;
+  final Color _currentColor = Colors.white;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();

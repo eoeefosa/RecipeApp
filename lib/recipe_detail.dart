@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'recipe.dart';
 
+// a page that shows when each recipe is clicked
 class RecipeDetail extends StatefulWidget {
   final Recipe recipe;
   const RecipeDetail({super.key, required this.recipe});
@@ -10,23 +11,33 @@ class RecipeDetail extends StatefulWidget {
 }
 
 class _RecipeDetailState extends State<RecipeDetail> {
+  // initializes _slider value to 1
   int _sliderVal = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // return a screen with the title as the lable of each recipe
       appBar: AppBar(title: Text(widget.recipe.label)),
+      // this prevent app for interacting with android notch or interactive areas in ios
       body: SafeArea(
           child: Column(
         children: [
-          SizedBox(
-            height: 300,
-            width: double.infinity,
-            child: Image(image: AssetImage(widget.recipe.imageUrl)),
+          // place the image in a widget of height 300 and set the width based on the aspect ration of widget
+          Card(
+            elevation: 2.0,
+            child: SizedBox(
+              height: 300,
+              width: double.infinity,
+              child: Image(image: AssetImage(widget.recipe.imageUrl)),
+            ),
           ),
           const SizedBox(height: 4),
-          Text(
-            widget.recipe.label,
-            style: const TextStyle(fontSize: 18),
+          Card(
+            elevation: 1.0,
+            child: Text(
+              widget.recipe.label,
+              style: Theme.of(context).textTheme.headline4,
+            ),
           ),
           Expanded(
             flex: 2,
